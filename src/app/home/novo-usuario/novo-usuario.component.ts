@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { minusculoValidator } from './minusculo.validator';
+import { minusculoValidator } from '../../validators/minusculo.validator';
 import { NovoUsuario } from './novo-usuario';
 import { NovoUsuarioService } from './novo-usuario.service';
-import { UsuarioExitsService } from './usuario-exits.service';
-import { usuarioSenhaIguaisValidator } from './usuario-senha.validator';
+import { UsuarioExitsService } from '../../services/usuario-exits.service';
+import { usuarioSenhaIguaisValidator } from 'src/app/validators/usuario-senha.validator';
 
 @Component({
   selector: 'app-novo-usuario',
@@ -38,6 +38,5 @@ export class NovoUsuarioComponent implements OnInit {
 
   cadastrar() {
     const novoUser = this.novoUsuarioForm.getRawValue() as NovoUsuario;
-    console.log(novoUser);
   }
 }
