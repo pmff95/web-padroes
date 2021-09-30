@@ -6,7 +6,7 @@
     <a [routerLink]="['']">Realizar login </a>
 </p>
 
-<form class="form mt-4" (ngSubmit)="cadastrar()" [formGroup]="novoUsuarioForm" (submit)="cadastrar()" #cadastrarForm="ngForm">
+<form class="form mt-4" (submit)="cadastrar()" [formGroup]="novoUsuarioForm" (submit)="cadastrar()" #cadastrarForm="ngForm">
     <div class="form-group mb-2">
         <input type="text" formControlName="fullName" placeholder="Nome Completo" class="form-control" name="nomeCompleto" id="nomeCompleto">
         <app-mensagem mensagem="Nome completo obrigatório" *ngIf="novoUsuarioForm.get('fullName')?.errors?.required && novoUsuarioForm.get('fullName')?.touched"></app-mensagem>
@@ -32,6 +32,6 @@
     </div>
 
     <div class="text-center">
-        <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+        <button class="btn btn-primary btn-block">Cadastrar</button>
     </div>
 </form>
