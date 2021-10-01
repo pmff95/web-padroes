@@ -1,0 +1,20 @@
+<div class="container">
+    <header class="sticky-top">
+        <nav class="navbar navbar-light bg-white">
+            <a class="navbar-brand ">Inicio</a>
+            <div *ngIf="user$|async as user" class="d-flex align-items-center">
+                <div *ngIf="user.name; else login ">
+                    <i class="fa fa-user-circle margin-right"></i>
+                    <a class="margin-right">{{user.name}}</a>
+                    <a id="logout" (click)="logout()">Sair</a>
+                </div>
+            </div>
+        </nav>
+
+        <ng-template #login>
+            <span class="navbar-text">
+                <a [routerLink]="['']">Login </a>
+            </span>
+        </ng-template>
+    </header>
+</div>

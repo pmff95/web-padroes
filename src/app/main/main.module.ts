@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { MainRoutingModule } from './main-routing.module';
 import { ListaMainComponent } from './lista-main/lista-main.component';
+import { AnimaisComponent } from './animais/animais.component';
 
 
 @NgModule({
   declarations: [
-    ListaMainComponent
+    ListaMainComponent,
+    AnimaisComponent
   ],
   imports: [
     CommonModule,
