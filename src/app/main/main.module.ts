@@ -4,16 +4,15 @@ import { CommonModule } from '@angular/common';
 import { MainRoutingModule } from './main-routing.module';
 import { ListaMainComponent } from './lista-main/lista-main.component';
 import { AnimaisComponent } from './animais/animais.component';
-
+import { CartaoModule } from '../componentes/cartao/cartao.module';
+import { GradeFotosAnimaisComponent } from './grade-fotos-animais/grade-fotos-animais.component';
 
 @NgModule({
   declarations: [
     ListaMainComponent,
-    AnimaisComponent
+    AnimaisComponent,
+    GradeFotosAnimaisComponent,
   ],
-  imports: [
-    CommonModule,
-    MainRoutingModule
-  ]
+  imports: [CommonModule, MainRoutingModule, CartaoModule],
 })
-export class MainModule { }
+export class MainModule {}

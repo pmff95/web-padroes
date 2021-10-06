@@ -1,4 +1,5 @@
-<div class="container">
-    <p>lista-main works!</p>
-
+<div *ngIf="animais$ | async as animais">
+    <div class="container">
+        <app-grade-fotos-animais [animais]="animais"></app-grade-fotos-animais>
+    </div>
 </div>

@@ -1,7 +1,5 @@
 //vem do back-end
 
-import { type } from 'os';
-
 export interface Animal {
   id: number;
   postDate: Date;

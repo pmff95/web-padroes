@@ -4,11 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CabecalhoModule } from './componentes/cabecalho/cabecalho.module';
-import { CartaoComponent } from './componentes/cartao/cartao.component';
 import { RodapeModule } from './componentes/rodape/rodape.module';
 
 @NgModule({
-  declarations: [AppComponent, CartaoComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
